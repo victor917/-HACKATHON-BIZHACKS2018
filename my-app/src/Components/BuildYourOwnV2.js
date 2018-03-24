@@ -9,7 +9,7 @@ export default class buildYourOwnV2 extends Component {
   }
   render () {
     return (<section className="build">
-    <h2>Build</h2>
+    <h2>Build Your Own Computer</h2>
     <table>
       <tr>
         <td>Processor:</td>

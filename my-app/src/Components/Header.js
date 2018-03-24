@@ -12,13 +12,13 @@ class Header extends Component {
     return (
       <header>
         <nav className="Header-navigation">
-          <span>BestBuyCompareTree</span>
+          <span><a href='/App'>BestBuyCompareTree</a></span>
           <a href='/App'>Contacts</a>
           <a href='#'>About Us</a>
-          <a href='#'>Home</a>
+          <a href='/App'>Home</a>
         </nav>
 
-      
+
       </header>
     );
   }
