@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
+import Header from './Components/Header.js'
+import BuildPart1 from './Components/BuildPart1.js'
 
 class App extends Component {
   constructor() {
@@ -10,14 +12,12 @@ class App extends Component {
   }
   render() {
     return (
-      <nav >
-        <a href='#'>Home</a>
-        <a href='#'>About Us</a>
-        <a href='#'>Contacts</a>
-      </nav>
-
-      
-      
+      <div>
+        <Header />
+        <div className="App-Window">
+          <BuildPart1 />
+        </div>
+      </div>
     );
   }
 }

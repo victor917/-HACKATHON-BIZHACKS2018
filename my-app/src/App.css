@@ -1,5 +1,23 @@
-.navigation {
-  list-style: inline-block;
-  text-decoration: none;
+.Header-navigation {
+  color: white;
+  background-color: black;
+  height: 20px;
+  padding: 20px;
+}
 
+.Header-navigation a {
+  float: right;
+  padding-left: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.Header-navigation span {
+  float: left;
+
+}
+
+.App-Window {
+  height: 100%;
+  background-color: beige;
 }
