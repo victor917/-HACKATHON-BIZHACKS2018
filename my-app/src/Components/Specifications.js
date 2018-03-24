@@ -3,7 +3,9 @@ import {inputData} from '../inputData.js';
 
 import greencircle from '../Images/greencircle.png';
 import yellowcircle from '../Images/yellowcircle.png';
-
+import storagesize from '../Images/storagesize.jpg';
+import ram from '../Images/ram.jpg';
+import monitor from '../Images/monitoricon.jpg';
 //Components
 import Prebuilt from '../Components/Prebuilt.js';
 /* make your own CSS file and import it here */
@@ -47,64 +49,65 @@ class Specifications extends Component {
       <div className="components-body">
         <div className="statement">The three specifications I care the most about are </div>
         
-        <div className="screen-option">
-          <a onClick={this.click} href="#" >
-            <img src={yellowcircle} />
-          </a>
-          <div> Screen Quality </div>
-        </div>
-                
-        <div className="speed-option"> 
-          <a onClick={this.click2} href="#" >
-            <img src={greencircle} />
-          </a>
-          <div> Speed </div>
-        </div>
-        
-        <div className="battery-option"> 
-          <a onClick={this.click3} href="#" >
-            <img src={yellowcircle} />
-          </a>
-          <div> Battery Life </div>
-        </div>
-        <div className="storage-option"> 
-          <a onClick={this.click4} href="#" >
-            <img src={greencircle} />
-          </a>
-          <div> Storage size </div>
-        </div>
-        <div className="weight-option"> 
-          <a onClick={this.click5} href="#" >
-            <img src={greencircle} />
-          </a>
-          <div> Weight </div>
-        </div>
-        <div className="monitor-option"> 
-          <a onClick={this.click6} href="#" >
-            <img src={greencircle} />
-          </a>
-          <div> Monitor </div>
-        </div>
-        <div className="os-option"> 
-          <a onClick={this.click7} href="#" >
-            <img src={greencircle} />
-          </a>
-          <div> Operating system </div>
-        </div>
-        <div className="ram-option"> 
-          <a onClick={this.click8} href="#" >
-            <img src={greencircle} />
-          </a>
-          <div> RAM </div>
-        </div>
-        <div className="processor-option"> 
-          <a onClick={this.click9} href="#" >
-            <img src={greencircle} />
-          </a>
-          <div> Processor </div>
-        </div>
+        <div className="options-container img-styles">
+          <div className="screen-option jpg-edit">
+            <a onClick={this.click} href="#" >
+              <img src={yellowcircle} />
+            </a>
+            <div> Screen Quality </div>
+          </div>
+                  
+          <div className="speed-option jpg-edit"> 
+            <a onClick={this.click2} href="#" >
+              <img src={greencircle} />
+            </a>
+            <div className="speed-text"> Speed </div>
+          </div>
+          
+          <div className="battery-option jpg-edit"> 
+            <a onClick={this.click3} href="#" >
+              <img src={yellowcircle} />
+            </a>
+            <div> Battery Life </div>
+          </div>
+          <div className="storage-option"> 
+            <a onClick={this.click4} href="#" >
+              <img src={storagesize} />
+            </a>
+            <div> Storage size </div>
+          </div>
+          <div className="weight-option"> 
+            <a onClick={this.click5} href="#" >
+              <img src={greencircle} />
+            </a>
+            <div> Weight </div>
+          </div>
+          <div className="monitor-option"> 
+            <a onClick={this.click6} href="#" >
+              <img src={monitor} />
+            </a>
+            <div> Monitor </div>
+          </div>
+          <div className="os-option"> 
+            <a onClick={this.click7} href="#" >
+              <img src={greencircle} />
+            </a>
+            <div> Operating system </div>
+          </div>
+          <div className="ram-option"> 
+            <a onClick={this.click8} href="#" >
+              <img src={ram} />
+            </a>
+            <div> RAM </div>
+          </div>
+          <div className="processor-option"> 
+            <a onClick={this.click9} href="#" >
+              <img src={greencircle} />
+            </a>
+            <div> Processor </div>
+          </div>
       </div>
-
+    </div>
     );
   }
 }

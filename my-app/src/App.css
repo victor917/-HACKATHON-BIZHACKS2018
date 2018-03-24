@@ -55,6 +55,7 @@
 }
 .options-container {
   display: grid;
+  grid-template-rows: min-content;
   font-size: 18pt;
   grid-template-columns: repeat(12, 1fr);
   grid-column: 1 / span 12;
@@ -65,10 +66,25 @@
   grid-column: 4 / span 3;
   grid-row: 2;
 }
+.laptop-text {
+  position: relative;
+  left: 100px;
+  font-size: 18pt;
+  justify-self: center;
+  align-self: center;
+}
+
 .two-options img {
   clip-path: circle(40% at 50% 50%);
 }
 .four-options img {
+  height: 300px;
+  width: 300px;
+  clip-path: circle(30% at 50% 50%);
+}
+.img-styles img {
+  height: 300px;
+  width: 300px;
   clip-path: circle(30% at 50% 50%);
 }
 .pc-option {
@@ -76,7 +92,13 @@
   grid-column: 8 / span 3;
   grid-row: 2;
 }
-
+.pc-text {
+  position: relative;
+  left: 100px;
+  font-size: 18pt;
+  justify-self: center;
+  align-self: center;
+}
 .prebuilt-option {
   grid-column: 4 / span 3;
   grid-row: 2;
@@ -92,7 +114,7 @@
 }
 .gaming-text {
   position: relative;
-  left: 10px;
+  left: 100px;
   font-size: 18pt;
   grid-column: 2 / span 1;
   grid-row: 1;
@@ -104,18 +126,44 @@
   grid-column: 4 / span 2;
   grid-row: 1;
 }
+.design-text {
+  position: relative;
+  left: 100px;
+  font-size: 18pt;
+  grid-column: 5 / span 1;
+  grid-row: 1;
+  justify-self: center;
+  align-self: center;
+}
 
 .schoolwork-option {
   font-size: 18pt;
   grid-column: 7 / span 2;
   grid-row: 1;
 }
+.schoolwork-text {
+  position: relative;
+  left: 80px;
+  font-size: 18pt;
+  grid-column: 7 / span 1;
+  grid-row: 1;
+  justify-self: center;
+  align-self: center;
+}
 .leisure-option {
   font-size: 18pt;
   grid-column: 10 / span 2;
   grid-row: 1;
 }
-
+.leisure-text {
+  position: relative;
+  left: 100px;
+  font-size: 18pt;
+  grid-column: 9 / span 1;
+  grid-row: 1;
+  justify-self: center;
+  align-self: center;
+}
 .screen-option {
   font-size: 18pt;
   grid-column: 8 / span 2;
@@ -131,6 +179,7 @@
   grid-column: 4 / span 2;
   grid-row: 1;
 }
+
 .battery-option {
   font-size: 18pt;
   grid-column: 4 / span 2;
