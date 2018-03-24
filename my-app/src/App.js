@@ -48,7 +48,7 @@ class App extends Component {
       else if (this.state.nextClick === 'customized') { 
         return  <BuildPart2 sendData={this.getData}/>
       }
-      else if (this.state.nextClick === '') {
+      else if (this.state.nextClick === 'usedFor') {
         return ''
       }
     }
