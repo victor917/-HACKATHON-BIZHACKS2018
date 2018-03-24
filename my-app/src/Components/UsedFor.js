@@ -3,7 +3,9 @@ import {inputData} from '../inputData.js';
 
 import greencircle from '../Images/greencircle.png';
 import yellowcircle from '../Images/yellowcircle.png';
-import thumbsup from '../Images/casualcomputer.gif';
+import gamingicon from '../Images/gaming.jpg';
+import designicon from '../Images/design-icon.jpg';
+import schoolworkicon from '../Images/schoolwork-icon.jpg';
 
 
 //Components
@@ -46,29 +48,29 @@ class UsedFor extends Component {
         <div className="options-container four-options">
         <div className="gaming-option">
           <a onClick={this.click} href="#" >
-            <img src={yellowcircle} />
+            <img src={gamingicon} />
           </a>
-        </div>
           <div className="gaming-text"> Gaming </div>
+        </div>
                 
         <div className="design-option"> 
           <a onClick={this.click2} href="#" >
-            <img src={greencircle} />
+            <img src={designicon} />
           </a>
-        </div>
           <div className="design-text"> Design </div>
+        </div>
         
         <div className="schoolwork-option"> 
           <a onClick={this.click2} href="#" >
-            <img src={yellowcircle} />
+            <img src={schoolworkicon} />
           </a>
-          <div> School/Work </div>
+          <div className="schoolwork-text"> School/Work </div>
         </div>
         <div className="leisure-option"> 
           <a onClick={this.click2} href="#" >
-            <img src={thumbsup} />
+            <img src={null} />
           </a>
-          <div> Leisure </div>
+          <div className="leisure-text"> Leisure </div>
         </div>
       </div>
       </div>

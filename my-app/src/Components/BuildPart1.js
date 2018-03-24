@@ -41,7 +41,7 @@ class BuildPart1 extends Component {
               <a onClick={this.click} href="#" > 
                 <img src={laptop} />
               </a>
-              <div className="laptop-option"> Laptop </div>
+              <div className="laptop-text"> Laptop </div>
             </div>
             
             <div className="pc-option">
@@ -49,8 +49,8 @@ class BuildPart1 extends Component {
                 <img src={pc} />
               </a>
 
+            <div className="pc-text"> Desktop </div>
             </div>
-            <div className="pc-option"> Desktop </div>
         </div>
       </div>
 
