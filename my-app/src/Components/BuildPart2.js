@@ -24,7 +24,7 @@ class BuildPart2 extends Component {
 
   click2(event) {
     inputData.add("customized", "custom")
-    this.props.sendData("buildyourown")
+    this.props.sendData("finished")
   }
 
   render() {
@@ -39,8 +39,6 @@ class BuildPart2 extends Component {
               </a>
               <div> buy a Prebuilt </div>
             </div>
-         
-
                 
         <div className="buildown-option">
           <a onClick={this.click2} href="#" >

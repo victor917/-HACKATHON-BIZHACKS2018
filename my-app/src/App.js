@@ -23,6 +23,7 @@ class App extends Component {
           nextClick: ''
         };
         this.getData = this.getData.bind(this)
+        this.printResponses = this.printResponses.bind(this)
     }
 
     componentDidMount() {
@@ -32,13 +33,26 @@ class App extends Component {
                 console.log('Category data', json);
             });
 
-        inputData.add("type", "desktop");
     }
 
     getData(data) {
       this.setState({
         nextClick: data
       })
+    }
+
+    printResponses() {
+      return (
+          <div>
+            <p>Type = {inputData.filters.type}</p>
+            <p>Customized = {inputData.filters.customized}</p>
+            <p>Purpose = {inputData.filters.purpose}</p>
+            <p>Specification 1 = {inputData.filters.spec1}</p>
+            <p>Specification 2 = {inputData.filters.spec2}</p>
+            <p>Specification 3 = {inputData.filters.spec3}</p>
+          </div>
+
+        )
     }
 
     prompt() {
@@ -57,6 +71,9 @@ class App extends Component {
       else if (this.state.nextClick === 'buildyourown') {
         return <BuildYourOwnV2 />
       }
+      else if (this.state.nextClick === 'finished'){
+        return this.printResponses()
+      }
     }
 
     render() {
@@ -66,7 +83,7 @@ class App extends Component {
               <Header />
               <div className="App-Window">
                 {this.prompt()}
-              </div>
+                </div>
             </div>
             </Router>
         );

@@ -9,6 +9,9 @@ export class InputData {
             type: "", // "desktop", "laptop"
             customized: "", // "prebuilt", "custom"
             purpose: "", // "gaming", "design", "work", "casual"
+            spec1: "", // first choice from specifications
+            spec2: "", // second choice from specifications
+            spec3: "" // third choice from specifications
         }
     }
 
