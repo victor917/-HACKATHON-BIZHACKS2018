@@ -11,14 +11,22 @@ class BuildPart1 extends Component {
   constructor() {
     super()
     this.state = {
+      inputData : this.props
     }
+    this.click = this.click.bind(this)
   }
+
+  click(event) {
+    inputData.add("type", "desktop")
+    this.props.sendData("customized")
+  }
+
   render() {
     return (
       <div className="components-body">
         <div className="statement">I am looking for a </div>
         <div>
-          <a onClick={inputData.add("type", "desktop")} href="/App" >
+          <a onClick={this.click} href="#" >
             <img src={bluecircle} />
           </a>
         </div>

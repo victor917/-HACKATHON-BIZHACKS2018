@@ -20,10 +20,15 @@ class App extends Component {
     constructor() {
         super();
         this.state = {
+          nextClick: ''
+          // customizedHide: true,
+          // purposeHide: true
         };
-        this.type = this.type.bind(this)
-        this.customized = this.customized.bind(this)
-        this.purpose = this.purpose.bind(this)
+        // this.prompt = this.prompt.bind(this)
+        // this.changePrompt = this.changePrompt.bind(this)
+        this.getData = this.getData.bind(this)
+        // this.choose = this.choose.bind(this)
+        // this.handlerPurp - this.handlerPurp.bind(this)
     }
 
     componentDidMount() {
@@ -33,47 +38,48 @@ class App extends Component {
                 console.log('Category data', json);
             });
 
-        inputData.add("type", "desktop");
+        // inputData.add("type", "desktop");
     }
 
-    type() {
-      const type = inputData.filters.type
-      if (type === '') {
-        return <BuildPart1 />
-      } else {
-        this.customized()
+    getData(data) {
+      this.setState({
+        nextClick: data
+      })
+    }
+
+    // handlerPurp(e) {
+    //   e.preventDefault()
+    //   this.setState({
+    //     purposeHide: !this.state.purposeHide
+    //   })
+    // }
+
+    prompt() {
+      if (this.state.nextClick === '') {
+        return <BuildPart1 sendData={this.getData}/>
       }
-    }
-
-    customized() {
-      const customized = inputData.filters.customized
-      if (customized === '') { 
-        return <BuildPart2 />
-      } else {
-        this.purpose()
+      else if (this.state.nextClick === 'customized') { 
+        return  <BuildPart2 sendData={this.getData}/>
       }
-    }
-
-    purpose() {
-      const purpose = inputData.filters.purpose
-      if (purpose === '') {
-        return <div />
-      } else {
+      else if (this.state.nextClick === '') {
         return ''
       }
     }
+
+    // changePrompt(props) {
+    //   this.setState({
+    //     nextClick : !nextClick
+    //   })
+    // }
 
     render() {
         return (
             <Router>
             <div>
-                <Header />
-                <div className="App-Window">
-                  {this.type()}
-                </div>
-
-                <Route exact path="/Prebuilt" component="Prebuilt" />
-                
+              <Header />
+              <div className="App-Window">
+                {this.prompt()}
+                </div>                
             </div>
             </Router>
         );
