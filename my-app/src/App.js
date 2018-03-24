@@ -21,14 +21,8 @@ class App extends Component {
         super();
         this.state = {
           nextClick: ''
-          // customizedHide: true,
-          // purposeHide: true
         };
-        // this.prompt = this.prompt.bind(this)
-        // this.changePrompt = this.changePrompt.bind(this)
         this.getData = this.getData.bind(this)
-        // this.choose = this.choose.bind(this)
-        // this.handlerPurp - this.handlerPurp.bind(this)
     }
 
     componentDidMount() {
@@ -38,7 +32,7 @@ class App extends Component {
                 console.log('Category data', json);
             });
 
-        // inputData.add("type", "desktop");
+        inputData.add("type", "desktop");
     }
 
     getData(data) {
@@ -46,13 +40,6 @@ class App extends Component {
         nextClick: data
       })
     }
-
-    // handlerPurp(e) {
-    //   e.preventDefault()
-    //   this.setState({
-    //     purposeHide: !this.state.purposeHide
-    //   })
-    // }
 
     prompt() {
       if (this.state.nextClick === '') {
@@ -65,12 +52,6 @@ class App extends Component {
         return ''
       }
     }
-
-    // changePrompt(props) {
-    //   this.setState({
-    //     nextClick : !nextClick
-    //   })
-    // }
 
     render() {
         return (
