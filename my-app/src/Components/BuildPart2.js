@@ -17,7 +17,6 @@ class BuildPart2 extends Component {
     this.click2 = this.click2.bind(this)
   }
 
-
   click(event) {
     inputData.add("customized", "prebuild")
     this.props.sendData("usedFor")
@@ -31,22 +30,26 @@ class BuildPart2 extends Component {
   render() {
     return (
       <div className="components-body">
-        <div className="statement">I am looking for a </div>
-        
-        <div>
-          <a onClick={this.click} href="#" >
-            <img src={yellowcircle} />
-          </a>
-        </div>
-        <div id="laptop-option" className="prebuilt-options"> Prebuilt </div>
-        
-        <div>
+        <div className="statement">I want to  </div>
+
+          <div className="options-container">
+            <div className="prebuilt-option">
+              <a onClick={this.click} href="#" >
+              <img src={yellowcircle} />
+              </a>
+              <div> buy a Prebuilt </div>
+            </div>
+         
+
+                
+        <div className="buildown-option">
           <a onClick={this.click2} href="#" >
             <img src={greencircle} />
-          </a>
+          </a> 
+          <div> Build my own </div>
         </div>
-        <div id="pc-option" className="prebuilt-options"> Build Your Own </div>
-      
+       
+      </div>
       </div>
 
     );

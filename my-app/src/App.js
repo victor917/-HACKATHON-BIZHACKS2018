@@ -11,8 +11,8 @@ import {
 import Header from './Components/Header.js';
 import BuildPart1 from './Components/BuildPart1.js';
 import BuildPart2 from './Components/BuildPart2.js';
+import UsedFor from './Components/UsedFor.js';
 import Prebuilt from './Components/Prebuilt';
-import UsedFor from './Components/UsedFor';
 import Specifications from './Components/Specifications';
 
 
@@ -49,7 +49,7 @@ class App extends Component {
         return  <BuildPart2 sendData={this.getData}/>
       }
       else if (this.state.nextClick === 'usedFor') {
-        return ''
+        return <UsedFor sendData={this.getData}/>
       }
     }
 

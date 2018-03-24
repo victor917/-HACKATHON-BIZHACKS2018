@@ -20,7 +20,8 @@ class BuildPart1 extends Component {
 
   click(event) {
     inputData.add("type", "laptop")
-    this.props.sendData("customized")
+    inputData.add("customized", "prebuilt")
+    this.props.sendData("usedFor")
   }
 
   click2(event) {
@@ -32,18 +33,19 @@ class BuildPart1 extends Component {
     return (
       <div className="components-body">
         <div className="statement">I am looking for a </div>
-        <div>
-          <a onClick={this.click} href="#" >
+        <div className="laptop-option">
+          <a onClick={this.click} href="#" > 
             <img src={bluecircle} />
           </a>
+         
         </div>
-        <div id="laptop-option" className="prebuilt-options"> Laptop </div>
-        <div>
+         <div className="laptop-option"> Laptop </div>
+        <div className="pc-option">
           <a onClick={this.click2} href="#" >
             <img src={redcircle} />
           </a>
         </div>
-        <div id="pc-option" className="prebuilt-options"> Desktop </div>
+        <div className="pc-option"> Desktop </div>
       </div>
 
     );

@@ -60,19 +60,28 @@
   grid-column: 1 / span 12;
   grid-row-start: 2;
   
-  grid-gap: 15px;
+  grid-gap: 25px;
 }
 .laptop-option {
   grid-column: 4 / span 3;
-  grid-row: 6;
+  grid-row: 2;
 }
 
 .pc-option {
   font-size: 18pt;
   grid-column: 8 / span 3;
-  grid-row: 6;
+  grid-row: 2;
 }
 
+.prebuilt-option {
+  grid-column: 4 / span 3;
+  grid-row: 2;
+}
+.buildown-option {
+  font-size: 18pt;
+  grid-column: 8 / span 3;
+  grid-row: 2;
+}
 .gaming-option {
   font-size: 18pt;
   grid-column: 3 / span 1;
