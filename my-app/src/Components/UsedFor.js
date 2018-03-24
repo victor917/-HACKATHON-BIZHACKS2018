@@ -6,6 +6,7 @@ import yellowcircle from '../Images/yellowcircle.png';
 import gamingicon from '../Images/gaming.jpg';
 import designicon from '../Images/design-icon.jpg';
 import schoolworkicon from '../Images/schoolwork-icon.jpg';
+import leisureicon from '../Images/leisure.jpg';
 
 
 //Components
@@ -68,7 +69,7 @@ class UsedFor extends Component {
         </div>
         <div className="leisure-option"> 
           <a onClick={this.click2} href="#" >
-            <img src={null} />
+            <img src={leisureicon} />
           </a>
           <div className="leisure-text"> Leisure </div>
         </div>

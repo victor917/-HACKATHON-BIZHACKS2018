@@ -33,8 +33,7 @@ class BuildPart2 extends Component {
     return (
       <div className="components-body">
         <div className="statement">I want to  </div>
-
-          <div className="options-container two-options">
+        <div className="options-container two-options">
             <div className="prebuilt-option">
               <a onClick={this.click} href="#" >
               <img src={prebuilt} />
