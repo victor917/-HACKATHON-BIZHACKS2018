@@ -29,11 +29,11 @@ class UsedFor extends Component {
     this.props.sendData("specifications")
   }
   click3(event) {
-    inputData.add("usedFor", "design")
+    inputData.add("usedFor", "school/work")
     this.props.sendData("specifications")
   }
   click4(event) {
-    inputData.add("usedFor", "design")
+    inputData.add("usedFor", "leisure")
     this.props.sendData("specifications")
   }
 
@@ -53,8 +53,9 @@ class UsedFor extends Component {
           <a onClick={this.click2} href="#" >
             <img src={greencircle} />
           </a>
+          <div className="design-option"> Design </div>
         </div>
-        <div className="design-option"> Design </div>
+        
       
       </div>
 

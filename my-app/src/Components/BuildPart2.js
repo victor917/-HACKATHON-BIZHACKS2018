@@ -39,8 +39,6 @@ class BuildPart2 extends Component {
               </a>
               <div> buy a Prebuilt </div>
             </div>
-         
-
                 
         <div className="buildown-option">
           <a onClick={this.click2} href="#" >

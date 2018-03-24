@@ -60,7 +60,6 @@ class App extends Component {
               <Header />
               <div className="App-Window">
                 {this.prompt()}
-                <BuildYourOwnV2 />
                 </div>
             </div>
             </Router>
