@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Prebuilt from './Components/Prebuilt';
 
 class App extends Component {
   constructor() {
@@ -10,6 +11,7 @@ class App extends Component {
   }
   render() {
     return (
+      <div>
       <nav >
         <a href='#'>Home</a>
         <a href='#'>About Us</a>
@@ -17,7 +19,8 @@ class App extends Component {
       </nav>
 
       
-      
+      <Prebuilt />
+      </div>
     );
   }
 }

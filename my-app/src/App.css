@@ -3,3 +3,13 @@
   text-decoration: none;
 
 }
+
+.components-body {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 0rem;
+}
+
+#laptop-option {
+    grid-column: 2 / span 2;
+}
