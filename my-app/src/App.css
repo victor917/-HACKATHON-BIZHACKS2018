@@ -212,3 +212,8 @@ div.options-container div > div {
   grid-column: 8 / span 2;
   grid-row: 3;
 }
+
+select {
+  height: 20px;
+  width: 100%;
+}
