@@ -12,6 +12,9 @@ import Header from './Components/Header.js';
 import BuildPart1 from './Components/BuildPart1.js';
 import BuildPart2 from './Components/BuildPart2.js';
 import Prebuilt from './Components/Prebuilt';
+import UsedFor from './Components/UsedFor';
+import Specifications from './Components/Specifications';
+
 
 class App extends Component {
     constructor() {
@@ -70,7 +73,6 @@ class App extends Component {
                 </div>
 
                 <Route exact path="/Prebuilt" component="Prebuilt" />
-                
                 
             </div>
             </Router>
