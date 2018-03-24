@@ -10,49 +10,48 @@ import Prebuilt from '../Components/Prebuilt.js';
 
 /* Computer -> Customized has prebuilt and BYO*/
 class BuildPart2 extends Component {
-  constructor() {
-    super()
-    this.state = {
+    constructor() {
+        super();
+
+        this.choosePrebuilt = this.choosePrebuilt.bind(this);
+        this.chooseCustomize = this.chooseCustomize.bind(this);
     }
-    this.click = this.click.bind(this)
-    this.click2 = this.click2.bind(this)
-  }
 
-  click(event) {
-    inputData.add("customized", "prebuild")
-    this.props.sendData("usedFor")
-  }
+    choosePrebuilt() {
+        inputData.add("categoryPath", "(categoryPath.id=abcat0501000)");
+        inputData.add("customized", "prebuilt");
+        this.props.func("usedForPage");
+    }
 
-  click2(event) {
-    inputData.add("customized", "custom")
+    chooseCustomize() {
+        inputData.add("customized", "custom");
+        this.props.func("usedForPage");
+    }
 
-    this.props.sendData("buildyourown")
-  }
+    render() {
+        return (
+            <div className="components-body">
+                <div className="statement">I want to  </div>
+                <div className="options-container two-options">
+                    <div className="prebuilt-option">
+                        <a onClick={this.choosePrebuilt} href="#" >
+                            <img src={prebuilt} />
+                        </a>
+                        <div> buy a Pre-built </div>
+                    </div>
 
-  render() {
-    return (
-      <div className="components-body">
-        <div className="statement">I want to  </div>
-        <div className="options-container two-options">
-            <div className="prebuilt-option">
-              <a onClick={this.click} href="#" >
-              <img src={prebuilt} />
-              </a>
-              <div> buy a Pre-built </div>
+                    <div className="buildown-option">
+                        <a onClick={this.chooseCustomize} href="#" >
+                            <img src={buildyourown} />
+                        </a>
+                        <div> Build my own </div>
+                    </div>
+
+                </div>
             </div>
-                
-            <div className="buildown-option">
-              <a onClick={this.click2} href="#" >
-                <img src={buildyourown} />
-              </a> 
-              <div> Build my own </div>
-            </div>
-       
-          </div>
-      </div>
 
-    );
-  }
+        );
+    }
 }
 
 export default BuildPart2;

@@ -18,19 +18,18 @@ import Prebuilt from '../Components/Prebuilt.js';
 
 class Specifications extends Component {
   constructor() {
-    super()
+    super();
     this.state = {
       count: 0,
       spec1: "",
       spec2: "",
       spec3: ""
-    }
-    this.click = this.click.bind(this)
-    this.finish = this.finish.bind(this)
+    };
+    this.click = this.click.bind(this);
+    this.finish = this.finish.bind(this);
   }
   
   click(data) {
-    console.log('hi');
     if (this.state.count === 0) {
       this.setState({
         spec1: data,
@@ -53,10 +52,10 @@ class Specifications extends Component {
 
   finish() {
     if (this.state.count === 3) {
-      inputData.add("spec1", this.state.spec1)
-      inputData.add("spec2", this.state.spec2)
-      inputData.add("spec3", this.state.spec3)
-      this.props.sendData("finished")
+      inputData.add("spec1", this.state.spec1);
+      inputData.add("spec2", this.state.spec2);
+      inputData.add("spec3", this.state.spec3);
+      this.props.func("resultsPage");
     }
   }
   

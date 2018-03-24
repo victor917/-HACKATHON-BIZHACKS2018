@@ -1,8 +1,10 @@
 .Header-navigation {
   color: white;
   background-color: black;
-  height: 20px;
+  height: 25px;
   padding: 20px;
+    line-height:35px;
+    font-weight: bold;
 }
 
 .Header-navigation a {
@@ -14,6 +16,10 @@
 
 .Header-navigation span {
   float: left;
+}
+
+.Header-navigation img {
+    max-width: 50px;
 }
 
 .App-Window {
@@ -31,6 +37,7 @@
   display: grid;
   height: auto;
   margin-top: 50px;
+    padding: 25px 0;
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 25px;
   background-color: rgba(74, 90, 95, 0.281);

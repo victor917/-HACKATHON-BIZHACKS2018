@@ -1,0 +1,45 @@
+
+#results-body {
+    display: initial;
+}
+
+#results-body img {
+    max-width: 50px;
+}
+
+.results-filter-list, .results-filter-header {
+    padding: 0 20px;
+}
+
+.results-filter {
+    width: 20%;
+    height: 100%;
+    background-color: black;
+    color: white;
+    float: left;
+}
+
+.results-tbl {
+    width: 80%;
+    float: right;
+    background: white;
+}
+
+.results-tbl table {
+    margin: 25px 20px;
+    border-collapse: collapse;
+}
+
+.results-tbl td {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.results-header {
+    text-align: center;
+    padding: 25px 0;
+}
+
+.results-tbl tr td:nth-child(1), .results-tbl tr td:nth-child(3) {
+    text-align: center;
+}
