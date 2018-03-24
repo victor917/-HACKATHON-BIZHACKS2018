@@ -14,7 +14,7 @@ import BuildPart2 from './Components/BuildPart2.js';
 import UsedFor from './Components/UsedFor.js';
 import Prebuilt from './Components/Prebuilt';
 import Specifications from './Components/Specifications';
-
+import BuildYourOwnV2 from './Components/BuildYourOwnV2.js';
 
 class App extends Component {
     constructor() {
@@ -45,7 +45,7 @@ class App extends Component {
       if (this.state.nextClick === '') {
         return <BuildPart1 sendData={this.getData}/>
       }
-      else if (this.state.nextClick === 'customized') { 
+      else if (this.state.nextClick === 'customized') {
         return  <BuildPart2 sendData={this.getData}/>
       }
       else if (this.state.nextClick === 'usedFor') {
@@ -60,11 +60,13 @@ class App extends Component {
               <Header />
               <div className="App-Window">
                 {this.prompt()}
-                </div>                
+                <BuildYourOwnV2 />
+                </div>
             </div>
             </Router>
         );
     }
+
 }
 
 export default App;
