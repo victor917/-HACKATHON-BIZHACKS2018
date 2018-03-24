@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import {inputData} from '../inputData.js';
 
-import greencircle from '../Images/greencircle.png';
-import yellowcircle from '../Images/yellowcircle.png';
+import buildyourown from '../Images/flat-buildyourown.jpg';
+import prebuilt from '../Images/flat-prebuilt.png';
 
 //Components
 import Prebuilt from '../Components/Prebuilt.js';
@@ -37,14 +37,14 @@ class BuildPart2 extends Component {
           <div className="options-container two-options">
             <div className="prebuilt-option">
               <a onClick={this.click} href="#" >
-              <img src={yellowcircle} />
+              <img src={prebuilt} />
               </a>
               <div> buy a Pre-built </div>
             </div>
                 
             <div className="buildown-option">
               <a onClick={this.click2} href="#" >
-                <img src={greencircle} />
+                <img src={buildyourown} />
               </a> 
               <div> Build my own </div>
             </div>
