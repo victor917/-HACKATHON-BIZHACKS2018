@@ -3,6 +3,8 @@ import {inputData} from '../inputData.js';
 
 import greencircle from '../Images/greencircle.png';
 import yellowcircle from '../Images/yellowcircle.png';
+import thumbsup from '../Images/casualcomputer.gif';
+
 
 //Components
 import Prebuilt from '../Components/Prebuilt.js';
@@ -64,7 +66,7 @@ class UsedFor extends Component {
         </div>
         <div className="leisure-option"> 
           <a onClick={this.click2} href="#" >
-            <img src={greencircle} />
+            <img src={thumbsup} />
           </a>
           <div> Leisure </div>
         </div>
