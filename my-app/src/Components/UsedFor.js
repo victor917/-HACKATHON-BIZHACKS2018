@@ -41,22 +41,34 @@ class UsedFor extends Component {
     return (
       <div className="components-body">
         <div className="statement">Select Purpose</div>
-        
+        <div className="options-container four-options">
         <div className="gaming-option">
           <a onClick={this.click} href="#" >
             <img src={yellowcircle} />
           </a>
-          <div> Gaming </div>
         </div>
+          <div className="gaming-text"> Gaming </div>
                 
-        <div>
+        <div className="design-option"> 
           <a onClick={this.click2} href="#" >
             <img src={greencircle} />
           </a>
-          <div className="design-option"> Design </div>
         </div>
+          <div className="design-text"> Design </div>
         
-      
+        <div className="schoolwork-option"> 
+          <a onClick={this.click2} href="#" >
+            <img src={yellowcircle} />
+          </a>
+          <div> School/Work </div>
+        </div>
+        <div className="leisure-option"> 
+          <a onClick={this.click2} href="#" >
+            <img src={greencircle} />
+          </a>
+          <div> Leisure </div>
+        </div>
+      </div>
       </div>
 
     );

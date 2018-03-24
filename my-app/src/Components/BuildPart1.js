@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import {inputData} from '../inputData.js';
 
-import bluecircle from '../Images/bluecircle.png';
-import redcircle from '../Images/redcircle.png';
+import pc from '../Images/Flat-PC.png';
+import laptop from '../Images/Flat-laptop-icon.jpg';
 
 //Components
 import Prebuilt from '../Components/Prebuilt.js';
@@ -36,19 +36,22 @@ class BuildPart1 extends Component {
         
         <div className="statement">I am looking for a </div>
 
-        <div className="laptop-option">
-          <a onClick={this.click} href="#" > 
-            <img src={bluecircle} />
-          </a>
-        </div>
-        <div className="laptop-option"> Laptop </div>
+          <div className="options-container two-options">
+            <div className="laptop-option">
+              <a onClick={this.click} href="#" > 
+                <img src={laptop} />
+              </a>
+              <div className="laptop-option"> Laptop </div>
+            </div>
+            
+            <div className="pc-option">
+              <a onClick={this.click2} href="#" >
+                <img src={pc} />
+              </a>
 
-        <div className="pc-option">
-          <a onClick={this.click2} href="#" >
-            <img src={redcircle} />
-          </a>
+            </div>
+            <div className="pc-option"> Desktop </div>
         </div>
-        <div className="pc-option"> Desktop </div>
       </div>
 
     );
