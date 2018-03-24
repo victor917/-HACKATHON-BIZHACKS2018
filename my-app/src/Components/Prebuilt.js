@@ -12,8 +12,10 @@ class Prebuilt extends Component {
     return (
         <div className="components-body">
             <div className="statement">I am looking for a </div>
-            <div id="Laptop-option" className="prebuilt-options"> Laptop </div>
-            <div id="PC-option" className="prebuilt-options"> PC </div>
+            <div className="options-container">
+              <div className="laptop-option"> Laptop </div>
+              <div className="pc-option"> PC </div>
+            </div>
         </div>
     );
   }
