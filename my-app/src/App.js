@@ -51,6 +51,12 @@ class App extends Component {
       else if (this.state.nextClick === 'usedFor') {
         return <UsedFor sendData={this.getData}/>
       }
+      else if (this.state.nextClick === 'specifications') {
+        return <Specifications sendData={this.getData}/>
+      }
+      else if (this.state.nextClick === 'buildyourown') {
+        return <BuildYourOwnV2 sendData={this.getData}/>
+      }
     }
 
     render() {

@@ -33,19 +33,22 @@ class BuildPart1 extends Component {
     return (
       <div className="components-body">
         <div className="statement">I am looking for a </div>
-        <div className="laptop-option">
-          <a onClick={this.click} href="#" > 
-            <img src={bluecircle} />
-          </a>
-         
+          <div className="options-container two-options">
+            <div className="laptop-option">
+              <a onClick={this.click} href="#" > 
+                <img src={bluecircle} />
+              </a>
+              <div className="laptop-option"> Laptop </div>
+            </div>
+            
+            <div className="pc-option">
+              <a onClick={this.click2} href="#" >
+                <img src={redcircle} />
+              </a>
+
+            </div>
+            <div className="pc-option"> Desktop </div>
         </div>
-         <div className="laptop-option"> Laptop </div>
-        <div className="pc-option">
-          <a onClick={this.click2} href="#" >
-            <img src={redcircle} />
-          </a>
-        </div>
-        <div className="pc-option"> Desktop </div>
       </div>
 
     );
