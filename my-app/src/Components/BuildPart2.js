@@ -24,7 +24,7 @@ class BuildPart2 extends Component {
 
   click2(event) {
     inputData.add("customized", "custom")
-    this.props.sendData("specifications")
+    this.props.sendData("buildyourown")
   }
 
   render() {
