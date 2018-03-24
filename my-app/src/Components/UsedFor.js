@@ -24,20 +24,20 @@ class UsedFor extends Component {
   }
 
   click(event) {
-    inputData.add("usedFor", "gaming")
+    inputData.add("purpose", "gaming")
     this.props.sendData("specifications")
   }
 
   click2(event) {
-    inputData.add("usedFor", "design")
+    inputData.add("purpose", "design")
     this.props.sendData("specifications")
   }
   click3(event) {
-    inputData.add("usedFor", "school/work")
+    inputData.add("purpose", "school/work")
     this.props.sendData("specifications")
   }
   click4(event) {
-    inputData.add("usedFor", "leisure")
+    inputData.add("purpose", "leisure")
     this.props.sendData("specifications")
   }
 
