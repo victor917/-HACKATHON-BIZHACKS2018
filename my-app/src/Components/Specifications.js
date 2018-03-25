@@ -55,6 +55,7 @@ class Specifications extends Component {
       inputData.add("spec1", this.state.spec1);
       inputData.add("spec2", this.state.spec2);
       inputData.add("spec3", this.state.spec3);
+      console.log("here");
       this.props.func("resultsPage");
     }
   }

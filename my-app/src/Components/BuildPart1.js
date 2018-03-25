@@ -12,8 +12,9 @@ class BuildPart1 extends Component {
     }
 
     chooseLaptop() {
-        inputData.add("categoryPath", "(categoryPath.id=abcat0502000)");
-        this.props.func("customizePage");
+        inputData.addUrlParameter("categoryPath", "(categoryPath.id=abcat0502000)");
+        inputData.add("type", "laptop");
+        this.props.func("usedForPage");
     }
 
     chooseDesktop() {

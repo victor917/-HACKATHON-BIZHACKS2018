@@ -18,9 +18,17 @@ class UsedFor extends Component {
 
     chooseGaming() {
         inputData.add("purpose", "gaming");
-        if (inputData.filters["customizable"] === 'prebuilt') {
-            inputData.add("keyword", "(search=gaming)");
+        if (inputData.filters["type"] === 'laptop') {
+            inputData.addUrlParameter("keyword", "(search=alienware)");
+        } else {
+            inputData.addUrlParameter("keyword", "(search=gaming)");
         }
+
+
+
+        /*if (inputData.filters["customizable"] === 'prebuilt' || inputData.filters["type"] === 'laptop')  {
+            inputData.addUrlParameter("keyword", "(search=gaming)");
+        }*/
 
         this.props.func("specifications");
     }

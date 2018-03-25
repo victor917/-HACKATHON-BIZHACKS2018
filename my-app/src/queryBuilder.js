@@ -19,14 +19,15 @@ export class QueryBuilder {
 
     createQuery() {
         var urlString = baseUrl;
+        if (inputData.filters.urlParameters.length > 0) {
+            urlString = urlString + '(';
 
-        Object.keys(inputData.filters).map(function(key) {
-            if (inputData.filters[key].length > 0) {
-                urlString = urlString + "(" + inputData.filters[key] + "&";
-            }
+            inputData.filters.urlParameters.map(function(object) {
+                urlString = urlString + object.value + "&";
+            });
 
             urlString = urlString.replace(/.$/,")") + apiKey + responseFormat;
-        });
+        }
 
         return urlString;
     }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { inputData } from '../inputData.js';
 import { queryBuilder } from '../queryBuilder.js';
 import '../Css/Results.css';
 
@@ -8,30 +9,40 @@ class Results extends Component {
     constructor() {
         super();
         this.state = {
-            products: []
+            products: [],
+            listOptions: []
         };
-        //this.products = [];
     }
 
     componentDidMount() {
         fetch(queryBuilder.createQuery())
             .then(response => response.json())
             .then(json => {
+                var options = [];
+                Object.keys(inputData.filters).map(function (key) {
+                    if (key === 'type' || key === 'customized' || key === 'purpose') {
+                        options.push(inputData.filters[key]);
+                    }
+                });
+
                 this.setState({
-                    products: json.products
+                    products: json.products,
+                    listOptions: options
                 });
 
                 // Testing
                 console.log('product data', this.state.products);
-                console.log(typeof this.state.products);
             });
-
     }
 
     render() {
         if (this.state.products.length == 0) {
             return null;
         }
+
+        var list = this.state.listOptions.map(function (str) {
+            return <li>{str}</li>
+        });
 
         return (
             <div className="components-body" id="results-body">
@@ -40,7 +51,7 @@ class Results extends Component {
                     <div className="results-filter-header">Filter</div>
                     <div className="results-filter-list">
                         <ul>
-                            <li>Laptops</li>
+                            {list}
                         </ul>
                     </div>
                 </div>
