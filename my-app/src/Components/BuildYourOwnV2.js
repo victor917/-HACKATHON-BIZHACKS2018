@@ -3,7 +3,7 @@ import '../App.css';
 
 export default class buildYourOwnV2 extends Component {
   constructor () {
-    super()
+    super();
     this.state = {
     }
   }

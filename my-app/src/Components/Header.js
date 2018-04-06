@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import '../App.css';
+import logo from '../Images/best-buy-logo.png';
 
 class Header extends Component {
   constructor() {
-    super()
+    super();
     this.state = {
       choice : ''
     }
@@ -12,7 +13,12 @@ class Header extends Component {
     return (
       <header>
         <nav className="Header-navigation">
-          <span><a href='/App'>BestBuyCompareTree</a></span>
+          <span>
+              <a href='/App'>
+                  <img src={logo}/>
+                  <span>CompareTree</span>
+              </a>
+          </span>
           <a href='/App'>Contacts</a>
           <a href='#'>About Us</a>
           <a href='/App'>Home</a>

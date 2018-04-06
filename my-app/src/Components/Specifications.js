@@ -6,25 +6,30 @@ import yellowcircle from '../Images/yellowcircle.png';
 import storagesize from '../Images/storagesize.jpg';
 import ram from '../Images/ram.jpg';
 import monitor from '../Images/monitoricon.jpg';
+import osimg from '../Images/os.png';
+import motherboard from '../Images/motherboard.jpg';
+import weight from '../Images/weight.jpg';
+import battery from '../Images/battery.jpg';
+import processor from '../Images/processor.jpg';
+import graphics from '../Images/graphics.jpg';
 //Components
 import Prebuilt from '../Components/Prebuilt.js';
 /* make your own CSS file and import it here */
 
 class Specifications extends Component {
   constructor() {
-    super()
+    super();
     this.state = {
       count: 0,
       spec1: "",
       spec2: "",
       spec3: ""
-    }
-    this.click = this.click.bind(this)
-    this.finish = this.finish.bind(this)
+    };
+    this.click = this.click.bind(this);
+    this.finish = this.finish.bind(this);
   }
   
   click(data) {
-    console.log('hi');
     if (this.state.count === 0) {
       this.setState({
         spec1: data,
@@ -47,10 +52,11 @@ class Specifications extends Component {
 
   finish() {
     if (this.state.count === 3) {
-      inputData.add("spec1", this.state.spec1)
-      inputData.add("spec2", this.state.spec2)
-      inputData.add("spec3", this.state.spec3)
-      this.props.sendData("finished")
+      inputData.add("spec1", this.state.spec1);
+      inputData.add("spec2", this.state.spec2);
+      inputData.add("spec3", this.state.spec3);
+      console.log("here");
+      this.props.func("resultsPage");
     }
   }
   
@@ -62,20 +68,20 @@ class Specifications extends Component {
         <div className="options-container img-styles">
           <div className="screen-option jpg-edit">
             <a onClick={() => this.click("screen-screen")} href="#" >
-              <img src={yellowcircle} />
+              <img src={graphics} />
             </a>
-            <div> Screen Quality </div>
+            <div> Graphics Quality </div>
           </div>
           <div className="speed-option jpg-edit"> 
             <a onClick={() => this.click("speed-option")} href="#" >
-              <img src={greencircle} />
+              <img src={processor} />
             </a>
             <div className="speed-text"> Speed </div>
           </div>
           
           <div className="battery-option jpg-edit"> 
             <a onClick={() => this.click("battery-option")} href="#" >
-              <img src={yellowcircle} />
+              <img src={battery} />
             </a>
             <div> Battery Life </div>
           </div>
@@ -87,7 +93,7 @@ class Specifications extends Component {
           </div>
           <div className="weight-option"> 
             <a onClick={() => this.click("weight-option")} href="#" >
-              <img src={greencircle} />
+              <img src={weight} />
             </a>
             <div> Weight </div>
           </div>
@@ -99,7 +105,7 @@ class Specifications extends Component {
           </div>
           <div className="os-option"> 
             <a onClick={() => this.click("os-option")} href="#" >
-              <img src={greencircle} />
+              <img src={osimg} />
             </a>
             <div> Operating system </div>
           </div>
@@ -111,7 +117,7 @@ class Specifications extends Component {
           </div>
           <div className="motherboard-option"> 
             <a onClick={() => this.click("motherboard-option")} href="#" >
-              <img src={greencircle} />
+              <img src={motherboard} />
             </a>
             <div> Motherboard </div>
           </div>
